@@ -21,4 +21,4 @@ spec:
         - containerPort: {{ .Values.echoserver.deployment.port }}
         env:
         - name: PORT
-          value: {{ .Values.echoserver.deployment.port }}
+          value: "{{ .Values.echoserver.deployment.port }}"

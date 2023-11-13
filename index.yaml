@@ -3,12 +3,12 @@ entries:
   echoserver:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-13T16:30:30.202665Z"
+    created: "2023-11-13T16:37:32.73904Z"
     description: A Helm chart for Kubernetes
-    digest: 9b0cab8782f9ab41a0e970a54d2b4f0dd642ff2438432ad6938936d328dc70ef
+    digest: 26f0a8cb1c082c6ba394469f422f0f34f4a579fb99bfcc444ab499b30f60809b
     name: echoserver
     type: application
     urls:
     - https://vibhanshu-thakur-dev.github.io/helm-charts/echoserver-0.1.0.tgz
     version: 0.1.0
-generated: "2023-11-13T16:30:30.202393Z"
+generated: "2023-11-13T16:37:32.738834Z"
