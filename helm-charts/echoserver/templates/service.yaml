@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.echoserver.app_name }}
+  namespace: {{ .Values.echoserver.namespace }}
+spec:
+  ports:
+    - port: {{ .Values.echoserver.deployment.port }}
+      targetPort: {{ .Values.echoserver.deployment.port }}
+      protocol: TCP
+  type: {{ .Values.echoserver.service.type }}
+  selector:
+    app: {{ .Values.echoserver.app_name }}

@@ -1,0 +1,17 @@
+# Default values for echoserver.
+# This is a YAML-formatted file.
+
+echoserver:
+  app_name: "ping-server"
+  namespace: "ping-server"
+  deployment:
+    image:
+      name: "ealen/echo-server"
+      version: "latest"
+    replicas: "4"
+    port: "80"
+  service:
+    type: "ClusterIP"
+  ingress:
+    path: "/ping"
+    ingressClassName: "kong"

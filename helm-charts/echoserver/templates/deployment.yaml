@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.echoserver.app_name }}
+  namespace: {{ .Values.echoserver.namespace }}
+spec:
+  replicas: {{ .Values.echoserver.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.echoserver.app_name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.echoserver.app_name }}
+    spec:
+      containers:
+      - image: {{ .Values.echoserver.deployment.image.name }}:{{ .Values.echoserver.deployment.image.version }}
+        imagePullPolicy: IfNotPresent
+        name: {{ .Values.echoserver.app_name }}
+        ports:
+        - containerPort: {{ .Values.echoserver.deployment.port }}
+        env:
+        - name: PORT
+          value: {{ .Values.echoserver.deployment.port }}
