@@ -8,7 +8,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: "/{{ .Values.echoserver.ingress.path }}"
+      - path: {{ .Values.echoserver.ingress.path }}
         pathType: Prefix
         backend:
           service:
